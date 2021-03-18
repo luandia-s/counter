@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Counter</title>
+</head>
+
+<body>
+
+    <div class="modal-overlay active">
+        <div class="modal">
+            <div class="modal-content">
+                <h1 class="title">Counter</h1>
+                <div class="input-field">
+                    <label for="date">Informe uma data :</label>
+                    <input type="date" id="date" name="date" required min="">
+                </div>
+                <div class="input-field">
+                    <button onclick="countdown.startCountdown()">
+                        iniciar contagem
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1>Counter</h1>
+            <button onclick="countdown.restartCountdown()">reiniciar</button>
+        </div>
+        <h1>Faltam</h1>
+        <div class="countdown">
+            <div class="time">
+                <h2 id="days"></h2>
+                <span>days</span>
+            </div>
+            <div class="time">
+                <h2 id="hours"></h2>
+                <span>hours</span>
+            </div>
+            <div class="time">
+                <h2 id="minutes"></h2>
+                <span>minutes</span>
+            </div>
+            <div class="time">
+                <h2 id="seconds"></h2>
+                <span>seconds</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
