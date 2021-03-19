@@ -1,11 +1,16 @@
 const secondsContainer = document.getElementById('seconds')
 const minutesContainer = document.getElementById('minutes')
 const hoursContainer = document.getElementById('hours')
-const daysContainer = document.getElementById('days')   
+const daysContainer = document.getElementById('days')
+const inputDate = document.getElementById('date')
+let currentDate = new Date()
+console.log(currentDate.toString());
 
-let x = setInterval(() => countdown.updateCountdown, 1000);
+inputDate.setAttribute('min', `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`)
 
-const modal = {
+let x = setInterval(() => Countdown.updateCountdown, 1000);
+
+const Modal = {
     open() {
         document
             .querySelector('.content')
@@ -28,8 +33,7 @@ const modal = {
     }
 }
 
-
-const countdown = {
+const Countdown = {
 
     getTimeUnit(unit) {
         return unit < 10 ? '0' + unit : unit
@@ -43,8 +47,8 @@ const countdown = {
     },
 
     startCountdown() {
-        setInterval(countdown.updateCountdown, 1000)
-        modal.close()
+        setInterval(Countdown.updateCountdown, 1000)
+        Modal.close()
     },
 
     updateCountdown() {
@@ -61,12 +65,12 @@ const countdown = {
         const hours = Math.floor(difference / 1000 / 60 / 60) % 24
         const minutes = Math.floor(difference / 1000 / 60) % 60
         const seconds = Math.floor(difference / 1000) % 60
-        countdown.insertCountdownValues({ days, hours, minutes, seconds })
+        Countdown.insertCountdownValues({ days, hours, minutes, seconds })
     },
 
     restartCountdown() {
         clearInterval(x)
-        modal.open()
+        Modal.open()
     }
 }
 

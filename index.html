@@ -18,10 +18,10 @@
                 <h1 class="title">Counter</h1>
                 <div class="input-field">
                     <label for="date">Informe uma data :</label>
-                    <input type="date" id="date" name="date" required min="">
+                    <input type="date" id="date" name="date">
                 </div>
                 <div class="input-field">
-                    <button onclick="countdown.startCountdown()">
+                    <button onclick="Countdown.startCountdown()">
                         iniciar contagem
                     </button>
                 </div>
@@ -29,10 +29,12 @@
         </div>
     </div>
 
+    <div class="loading"></div>
+
     <div class="content">
         <div class="header">
             <h1>Counter</h1>
-            <button onclick="countdown.restartCountdown()">reiniciar</button>
+            <button onclick="Countdown.restartCountdown()">reiniciar</button>
         </div>
         <h1>Faltam</h1>
         <div class="countdown">

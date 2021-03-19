@@ -26,11 +26,12 @@ body {
 }
 
 .modal {
-    min-width: 380px;
+    width: 380px;
     max-height: 500px;
     padding: 2rem;
     border-radius: 5px;
     background: #FFF;
+    margin: 1rem;
 }
 
 .modal-overlay {
@@ -63,7 +64,6 @@ body {
 }
 
 .input-field input[type='date'] {
-    width: 316px;
     height: 50px;
     outline: none;
     border: none;
@@ -73,7 +73,6 @@ body {
 }
 
 .input-field button {
-    width: 100%;
     border: none;
     outline: none;
     padding: 1rem;
