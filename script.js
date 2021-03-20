@@ -2,11 +2,6 @@ const secondsContainer = document.getElementById('seconds')
 const minutesContainer = document.getElementById('minutes')
 const hoursContainer = document.getElementById('hours')
 const daysContainer = document.getElementById('days')
-const inputDate = document.getElementById('date')
-let currentDate = new Date()
-console.log(currentDate.toString());
-
-inputDate.setAttribute('min', `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`)
 
 let x = setInterval(() => Countdown.updateCountdown, 1000);
 
@@ -74,3 +69,11 @@ const Countdown = {
     }
 }
 
+let today = new Date()
+let day = Countdown.getTimeUnit(today.getDate())
+let month = Countdown.getTimeUnit(today.getMonth() + 1)
+let year = today.getFullYear()
+
+today = `${year}-${month}-${day}`
+
+document.querySelector('input[type="date"]').setAttribute('min', today)
