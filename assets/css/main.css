@@ -31,7 +31,7 @@ body {
 }
 
 .modal {
-    width: 380px;
+    width: 350px;
     max-height: 500px;
     padding: 2rem;
     border-radius: 5px;
@@ -69,7 +69,7 @@ body {
 }
 
 .input-field input[type='date'] {
-    width: 316px;
+    width: 100%;
     height: 50px;
     outline: none;
     border: none;
